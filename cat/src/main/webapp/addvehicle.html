@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+ <style>
+ .bg-img {
+            background-image: url(
+"https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJ1Y2t8ZW58MHx8MHx8&w=1000&q=80.jpg");
+            min-height: 650px;
+            background-size: cover;
+        }
+        .mark{
+        background-color:white;}</style>
+<body >
+
+  <div class="container">
+  <div class="bg-img">
+  
+    <div class="title"><mark><centre>ADD A NEW VEHICLE</centre></mark></div>
+    <div class="content">
+      <form action="addvehicle-process.jsp" method="post">
+        <div class="user-details">
+          
+          <div class="input-box">
+            <span class="details"><mark>NAME</mark></span>
+            <input type="text" name="name" placeholder="Enter the name" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>TYPE</mark></span>
+            <input type="text" name="type" placeholder="Enter the type" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>VEHICLE NUMBER</mark></span>
+            <input type="text" name="vehiclenumber" placeholder="Enter the vehicle number" required>
+          </div>
+          
+          <div class="input-box">
+            <span class="details"><mark>PLACE WHERE BOUGHT</mark></span>
+            <input type="text" name="place" placeholder="Enter the place" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>YEAR OF BUYING</mark></span>
+            <input type="text" name="year" placeholder="Enter the year" required>
+          </div>
+           <br>
+        
+        
+        </div>
+        <div class="button">
+          <input type="submit"  value="ADD" >
+        </div>
+      </form>
+    </div>
+  
+  </div>
+  </div>
+  </body>
+</html>

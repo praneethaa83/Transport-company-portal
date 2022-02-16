@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+ <style>
+ .bg-img {
+            background-image: url(
+"https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJ1Y2t8ZW58MHx8MHx8&w=1000&q=80.jpg");
+            min-height: 650px;
+            background-size: cover;
+        }
+        .mark{
+        background-color:white;}</style>
+<body >
+
+  <div class="container">
+  <div class="bg-img">
+  
+    <div class="title"><mark><centre>ADD A NEW MANAGER</centre></mark></div>
+    <div class="content">
+      <form action="addmanager-process.jsp" method="post">
+        <div class="user-details">
+          
+          <div class="input-box">
+            <span class="details"><mark>NAME</mark></span>
+            <input type="text" name="name" placeholder="Enter name" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>AGE</mark></span>
+            <input type="text" name="age" placeholder="Enter age" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>DESIGNATION</mark></span>
+            <input type="text" name="designation" placeholder="Enter the designation" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>SALARY</mark></span>
+            <input type="text" name="salary" placeholder="Enter the salary" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>QUALIFICATION</mark></span>
+            <input type="text" name="qualification" placeholder="Enter the qualification" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>ADDRESS</mark></span>
+            <input type="text" name="address" placeholder="Enter  address" required>
+          </div> <br>
+          <div class="input-box">
+            <span class="details"><mark>MANAGER ID</mark></span>
+            <input type="text" name="id" placeholder="Enter manager id" required>
+          </div>
+          <div class="input-box">
+            <span class="details"><mark>PHONE NUMBERM</mark></span>
+            <input type="text" name=" number" placeholder="Enter phone number" required>
+          </div> <br>
+        
+        
+        </div>
+        <div class="button">
+          <input type="submit"  value="ADD" >
+        </div>
+      </form>
+    </div>
+  
+  </div>
+  </div>
+  </body>
+</html>

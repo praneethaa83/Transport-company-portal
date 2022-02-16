@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <script type="text/javascript">
+$(function () {
+    $("#pickdate").datepicker({
+        numberOfMonths: 2,
+        onSelect: function (selected) {
+            var dt = new Date(selected);
+            dt.setDate(dt.getDate() + 1);
+            $("#dropdate").datepicker("option", "minDate", dt);
+        }
+    });
+    $("#dropdate").datepicker({
+        numberOfMonths: 2,
+        onSelect: function (selected) {
+            var dt = new Date(selected);
+            dt.setDate(dt.getDate() - 1);
+            $("#pickdate").datepicker("option", "maxDate", dt);
+        }
+    });
+});
+</script>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="userform-process.jsp" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" name="firstname" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" name="lastname" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input  type="email"  name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phonenumber" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter pick up location</span>
+            <input type="text" name="pickup" placeholder="Enter your location" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter delivery location</span>
+            <input type="text" name="droploc" placeholder="delivery location" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Enter the shipping address</span>
+            <input type="text" name="address" placeholder="Enter Shipping address" required>
+          </div> <br>
+          <div class="input-box">
+            <span class="details">Parcel pick up date</span>
+            <input type="date" name="pickdate" name="trip-start"
+       value="2022-1-28"
+       min="2022-1-28" max="2022-1-29">
+          </div>
+          <div class="input-box">
+            <span class="details">Parcel delivery date</span>
+            <input type="date" name="dropdate"  required>
+          </div>
+        <div class="input-box">
+            <span class="details">Enter the parcel weight</span>
+            <input type="text" name="weight" placeholder="enter the parcel weight in kilograms" required>
+          </div>
+        
+        </div>
+        <div class="button"><a href="landingpage.html">
+          <input type="submit"  value="Register" ></a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
